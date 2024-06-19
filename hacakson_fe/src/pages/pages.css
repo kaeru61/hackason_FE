@@ -1,0 +1,95 @@
+/* AppBasic container style */
+.AppBasic {
+    max-width: calc(100%-250px);
+    margin: 0 auto;
+    margin-left: 250px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* ModeSelecterContainer style */
+.ModeSelecterContainer {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between items */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* selectMode button style */
+.selectMode {
+    padding: 10px 20px;
+    background-color: #f5f8fa;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100px;
+}
+
+.selectMode:hover {
+    background-color: #e1e8ed;
+}
+
+/* Label inside selectMode */
+.selectMode .label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1da1f2;
+    margin: 0;
+}
+
+/* timeline container style */
+.timeline {
+    background-color: #f5f8fa;
+    border-radius: 10px;
+}
+
+/* Example Post component styling */
+.Post {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Link style */
+a {
+    text-decoration: none;
+}
+
+/* Media Queries for responsive design */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .ModeSelecterContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .selectMode {
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    .AppBasic{
+        width: calc(100%-200px);
+        margin-left: 200px;
+    }
+    .selectMode {
+        width: 80px; /* Adjust width for medium devices */
+        font-size: 14px; /* Adjust font size for medium devices */
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    .AppBasic {
+        max-width: 100%; /* Adjust max-width for large devices */
+    }
+}
+

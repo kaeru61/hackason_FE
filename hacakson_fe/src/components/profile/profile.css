@@ -1,0 +1,112 @@
+/* profileContainer style */
+.profileContainer {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+/* userTag style */
+.userTag {
+    margin-bottom: 20px;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.userTag .userName {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1da1f2;
+    margin: 0;
+}
+
+.userTag .userId {
+    font-size: 18px;
+    color: #657786;
+    margin: 0;
+}
+
+/* followsContainer style */
+.followsContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.followsInfo {
+    margin: 0 10px;
+    flex-direction: row
+}
+
+.followsInfo .text1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1da1f2;
+    margin: 0;
+}
+
+.followsInfo .text2 {
+    font-size: 16px;
+    color: #657786;
+    margin: 0;
+}
+
+/* userBioContainer style */
+.userBioContainer {
+    margin-bottom: 20px;
+}
+
+.userBioContainer .userBio {
+    font-size: 16px;
+    color: #657786;
+    margin: 0;
+}
+
+/* Media Queries for responsive design */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .profileContainer {
+        padding: 10px;
+    }
+    
+    .userTag .userName {
+        font-size: 20px;
+    }
+
+    .userTag .userId {
+        font-size: 16px;
+    }
+
+    .followsInfo .text1 {
+        font-size: 18px;
+    }
+
+    .followsInfo .text2 {
+        font-size: 14px;
+    }
+
+    .userBioContainer .userBio {
+        font-size: 14px;
+    }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    .profileContainer {
+        max-width: 100%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    .profileContainer {
+        max-width: 100%;
+    }
+}
