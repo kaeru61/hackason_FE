@@ -7,27 +7,27 @@ const SideBar = () => {
 const navigate = useNavigate();
     const onLogOut = () => {
             fireAuth.signOut();
-            navigate("/main");
+            navigate("/");
           };
     return (
         <div className="sidebar">
             <h1 className="AppLogo">Logo</h1>
-            <Link to='/home' >
+            <Link to='/app/home' >
                 <div className="button">
                     <h1 className="buttonLabel">Home</h1>
                 </div>
             </Link>
-            <Link to='/profile' >
+            <Link to='/app/profile' >
                 <div className="button">
                     <h1 className="buttonLabel">Profile</h1>
                 </div>
             </Link>
-            <Link to='/home' >
+            <Link to='/app/home' >
                 <div className="button">
                     <h1 className="buttonLabel">Explore</h1>
                 </div>
             </Link>
-            <Link to='/create'>
+            <Link to='/app/create'>
                 <div className="createButton">
                     <h1 className="createButtonLabel">Post</h1>
                 </div>

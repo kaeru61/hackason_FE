@@ -7,7 +7,7 @@ import './post.css'
 const PostDetail = (props) => {
     const navigate = useNavigate();
     const LinkToProfile = (props) =>{
-        navigate("/profile", {
+        navigate("/app/profile", {
             state: { userId: props.userId}
         })
     }

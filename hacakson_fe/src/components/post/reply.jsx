@@ -6,12 +6,12 @@ import './post.css'
 const Reply = (props) => {
     const navigate = useNavigate();
     const LinkToProfile = (props) =>{
-        navigate("/profile", {
+        navigate("/app/profile", {
             state: { userId: props.userId}
         })
     }
     const LinkToPostDetail = (props) => {
-        navigate("/postDetail", {
+        navigate("/app/postDetail", {
             state: { postId: props.key}
         })
     }

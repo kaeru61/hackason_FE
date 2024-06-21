@@ -24,12 +24,12 @@ const Post = (props) => {
     const navigate = useNavigate();
     const [likeStatus, setLikeStatus] = useState(false);
     const LinkToProfile = (props) =>{
-        navigate("/profile", {
+        navigate("/app/profile", {
             state: { userId: props.userId}
         })
     }
     const LinkToPostDetail = () => {
-        navigate("/postDetail", {
+        navigate("/app/postDetail", {
             state: { postId: props.id }
         })
     }

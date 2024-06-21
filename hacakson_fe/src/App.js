@@ -20,11 +20,11 @@ function App() {
   return (
       <BrowserRouter>
           <Routes>
-            <Route path='/main' element={<Main/>}/>
+            <Route path='/' element={<Main/>}/>
             <Route path='/signin' element={<SignIn/>}/>
             <Route path='/signup' element={<SignUp/>}/>
             <Route path='/register' element={<UserRegister/>}/>
-            <Route path='/' element={<AppHome />}>
+            <Route path='/a/' element={<AppHome />}>
               <Route path='home' element={<Home/>}/>
               <Route path='homefollowing' element={<Homefollowing/>}/>
               <Route path='profile' element={<ProfileMine/>}/>

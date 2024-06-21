@@ -28,7 +28,7 @@ const SignIn = () => {
       password
       );
       if (userCredential.user) {
-      navigate("/");
+      navigate("/app/home");
       }
     } catch (error) {
     console.log(error);

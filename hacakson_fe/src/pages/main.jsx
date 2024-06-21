@@ -26,7 +26,7 @@ const Main = () => {
     }
 
     if (loginUser) {
-      navigate("/home")
+      navigate("/app/home")
       
     } else {
         return (

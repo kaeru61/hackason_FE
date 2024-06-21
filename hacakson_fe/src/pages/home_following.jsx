@@ -7,7 +7,7 @@ const Homefollowing = () => {
     return (
         <div className="AppBasic">
             <div className='ModeSelecterContainer'>
-            <Link to='/home'>
+            <Link to='/app/home'>
                 <div className='selectMode'>
                     <h1 className='label'>All</h1>
                 </div>

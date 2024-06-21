@@ -8,7 +8,7 @@ const ProfileInfoMine = (props) => {
             <div className="userTag">
                 <h1 className="userName">{props.userName}</h1>
                 <h1 className="userId">@{props.userId}</h1>
-                <Link to='/editProfile'>
+                <Link to='/app/editProfile'>
                     <div className='selectMode'>
                         <h1 className='label'>Edit</h1>
                     </div>

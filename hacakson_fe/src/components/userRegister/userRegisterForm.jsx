@@ -29,7 +29,7 @@ const UserRegisterForm = () => {
             if (!res){
                 throw Error(`Failed to fetch user`);
             } else {
-                navigate('/')
+                navigate('/app/home')
             }
         } catch (err) {
             console.log(err);
