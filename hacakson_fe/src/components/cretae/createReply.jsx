@@ -3,9 +3,10 @@ import './create.css'; // PostFormのスタイルを記述するCSSファイル�
 import axios from 'axios';
 import { fireAuth } from '../../firebase';
 
-const PostForm = () => {
+const ReplyForm = (props) => {
     // フォームの各項目の状態を管理するためのState
     const [tweetText, setTweetText] = useState('');
+    // フォームを送信するハンドラー
     const [uid, setUid] = useState(null);
     useEffect(() => {
         const unsubscribe = fireAuth.onAuthStateChanged(user => {
@@ -18,14 +19,13 @@ const PostForm = () => {
 
         return () => unsubscribe();
     }, []);
-    // フォームを送信するハンドラー
     const fetchPost = async () => {
         const datetime = new Date().toLocaleString('sv-SE')
         try {
             const res = await axios.post("https://hackason-be1-ndzwuezdra-uc.a.run.app/post", {
                 userId: uid,
                 body: tweetText,
-                parentId: "",
+                parentId: props.parentId,
                 createAt: datetime
             })
             if (!res){
@@ -53,13 +53,13 @@ const PostForm = () => {
     return (
         <div className="postFormContainer">
             <div className="userTag">
-                    <h1 className="userName">userName</h1>
-                    <h1 className="userName">{uid}</h1>
+                        <h1 className="userName">userName</h1>
+                        <h1 className="userName">{uid}</h1>
             </div>
             <form onSubmit={handleSubmit} className="postForm">
                 <textarea
                     className="tweetTextArea"
-                    placeholder="What's happening?"
+                    placeholder="reply"
                     value={tweetText}
                     onChange={(e) => setTweetText(e.target.value)}
                     required
@@ -70,4 +70,4 @@ const PostForm = () => {
     );
 };
 
-export default PostForm;
+export default ReplyForm;

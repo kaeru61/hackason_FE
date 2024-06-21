@@ -32,7 +32,7 @@ const SignUp = () => {
           password
           );
         updateProfile(fireAuth.currentUser, {displayName: email});
-        navigate("/app/register");
+        navigate("/register");
       } catch (error) {
       console.log(error);
       }

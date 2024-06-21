@@ -54,6 +54,7 @@
 .timeline {
     background-color: #f5f8fa;
     border-radius: 10px;
+    gap: 20px;
 }
 
 /* Example Post component styling */

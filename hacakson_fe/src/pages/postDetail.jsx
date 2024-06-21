@@ -4,6 +4,7 @@ import PostDetail from "../components/post/postDetail";
 import './pages.css'
 import axios from 'axios';
 import Reply from "../components/post/reply";
+import ReplyForm from "../components/cretae/createReply";
 
 const PostDetailPage = () => {
         const [post, setPost] = useState({root:　{}, replies:[]});
@@ -11,6 +12,7 @@ const PostDetailPage = () => {
         const [likedBy, setLikedBy] = useState(0);
         const location = useLocation();
         const postId = location.state?.postId;
+        const [reply, setReply] = useState(false)
 
         const FetchPosts = async () => {
             try {

@@ -20,13 +20,13 @@ const ProfileMine = () => {
                 setUid(user.uid);
             } else {
                 setUid(null); // ログアウト時の処理
-                return () => unsubscribe();
             }
-            
         });
-    }, [])
+        return () => unsubscribe();
+    }, []);
 
-    useEffect(()=> {fetchUser()}, [uid])
+    useEffect(()=> {
+        if(uid) {fetchUser()};}, [uid])
 
     const fetchUser = async () => {
         try {

@@ -9,7 +9,7 @@
 }
 
 .userTag {
-    display: flex;
+    max-width: calc(100%-250px);
     align-items: center;
     margin-bottom: 10px;
     cursor: pointer;
@@ -28,9 +28,12 @@
 }
 
 @media (max-width: 768px) {
-    .CreateFormContainer {
-        width: 100%; /* Adjust for smaller sidebar width */
+    .postFormContainer {
+        width: calc(100%-200px); /* Adjust for smaller sidebar width */
         padding: 15px;
+    }
+    .userTag{
+        max-width: calc(100%-200px)
     }
     .userName {
         font-size: 14px;
@@ -42,8 +45,8 @@
 }
 
 @media (max-width: 480px) {
-    .CreateFormContainer {
-        width: 100%; /* Full width for small screens */
+    .postFormContainer {
+        width: calc(100%-200px); /* Full width for small screens */
         margin-left: 0; /* No margin for full width */
         padding: 10px;
     }

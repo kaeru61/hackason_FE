@@ -29,11 +29,9 @@ const Home = () => {
                 <div className='selectMode'>
                     <h1 className='label'>All</h1>
                 </div>
-            <Link to='/homefollowing'>
                 <div className='selectMode'>
                     <h1 className='label'>following</h1>
                 </div>
-            </Link>
             </div>
             <div className='timeline'>
             {posts.map((post) => {
