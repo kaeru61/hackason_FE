@@ -24,14 +24,12 @@ function App() {
             <Route path='/signin' element={<SignIn/>}/>
             <Route path='/signup' element={<SignUp/>}/>
             <Route path='/register' element={<UserRegister/>}/>
-            <Route path='/a/' element={<AppHome />}>
-              <Route path='home' element={<Home/>}/>
-              <Route path='homefollowing' element={<Homefollowing/>}/>
-              <Route path='profile' element={<ProfileMine/>}/>
-              <Route path='profileLikes' element={<ProfileMineLikes/>}/>
-              <Route path='editProfile'></Route>
-              <Route path='postDetail' element={<PostDetailPage/>}/>
-              <Route path='create' element={<Create/>}/>
+            <Route path='/app' element={<AppHome />}>
+              <Route path='/app/home' element={<Home/>}/>
+              <Route path='/app/profile' element={<ProfileMine/>}/>
+              <Route path='/app/editProfile'></Route>
+              <Route path='/app/postDetail' element={<PostDetailPage/>}/>
+              <Route path='/app/create' element={<Create/>}/>
             </Route>
           </Routes>
       </BrowserRouter>
