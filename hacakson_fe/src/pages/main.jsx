@@ -27,6 +27,7 @@ const Main = () => {
 
     if (loginUser) {
       navigate("/home")
+      
     } else {
         return (
           <div className='body'>
