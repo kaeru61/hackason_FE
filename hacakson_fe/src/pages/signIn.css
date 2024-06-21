@@ -1,0 +1,122 @@
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.signInContainer {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+}
+
+.signInContainer p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1da1f2;
+}
+
+.signInContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signInContainer input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccd6dd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.signInContainer input:focus {
+    border-color: #1da1f2;
+}
+
+.signInContainer button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.signInContainer button:hover {
+    background-color: #0d95e8;
+}
+
+.signInContainer .signUpButton {
+    margin-top: 15px;
+    background-color: #ffffff;
+    color: #1da1f2;
+    border: 1px solid #1da1f2;
+    transition: background-color 0.2s, color 0.2s;
+    margin-right:15px;
+}
+
+.signInContainer .signUpButton:hover {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.AppBasic2 {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .signInContainer {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .signInContainer p {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .signInContainer input, .signInContainer button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .AppBasic2{
+        width: 100%;
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signInContainer {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .signInContainer p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .signInContainer input, .signInContainer button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

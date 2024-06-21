@@ -37,6 +37,12 @@
         text-align: center;
     }
 
+    .createButton {
+        margin: 0;
+        flex: 1;
+        text-align: center;
+    }
+
     .AppLogo {
         display: none; /* Hide the logo on very small screens */
     }
@@ -60,6 +66,33 @@
     background-color: transparent;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.createButton{
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 25px;
+}
+
+.createButton:hover{
+    width: 100%;
+    border-radius: 25px;
+    background-color:#f5f8fa;
+}
+
+.createButtonLabel{
+    color: #1DA1F2;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px 0;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .button:hover {

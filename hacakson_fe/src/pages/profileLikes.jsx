@@ -1,8 +1,8 @@
 import ProfileInfo from "../components/profile/plofile"
 import './pages.css'
-import { Link } from "react-router-dom/cjs/react-router-dom"
+import { Link } from "react-router-dom"
 
-const ProfileLikes = () => {
+const ProfileMineLikes = () => {
     return(
         <div className="AppBasic">
             <ProfileInfo/>
@@ -20,4 +20,4 @@ const ProfileLikes = () => {
     )
 }
 
-export default ProfileLikes;
+export default ProfileMineLikes;

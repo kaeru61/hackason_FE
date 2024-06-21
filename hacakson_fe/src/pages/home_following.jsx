@@ -1,6 +1,6 @@
 import SideBar from '../components/sidebar/sidebar'
 import Post from '../components/post/post';
-import { Link } from 'react-router-dom/cjs/react-router-dom';
+import { Link } from 'react-router-dom';
 import './pages.css'
 
 const Homefollowing = () => {

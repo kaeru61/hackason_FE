@@ -1,0 +1,115 @@
+.userRegisterContainer{
+    width: 100%; 
+    padding: 20px;
+    border-bottom: 1px solid #e1e8ed;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.userTag {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.userName, .userId {
+    color: #14171a;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.userId {
+    font-size: 14px;
+    color: #657786;
+}
+
+@media (max-width: 768px) {
+    .userRegisterContainer {
+        width: 100%; 
+        padding: 15px;
+    }
+    .userName {
+        font-size: 14px;
+    }
+
+    .userId {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .userRegisterContainer {
+        width: 100%; /* Full width for small screens */
+        margin-left: 0; /* No margin for full width */
+        padding: 10px;
+    }
+
+
+    .userName {
+        font-size: 12px;
+    }
+
+    .userId {
+        font-size: 10px;
+    }
+}
+
+/* postFormContainer style */
+.userRegisterContainer {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+
+/* postForm style */
+.userRegisterForm {
+    display: flex;
+    flex-direction: column;
+}
+
+/* tweetTextArea style */
+.userNameArea {
+    resize: none;
+    height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.bioArea {
+    resize: none;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* tweetButton style */
+.registerButton {
+    background-color: #1da1f2;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registerButton:hover {
+    background-color: #0d8bf3;
+}

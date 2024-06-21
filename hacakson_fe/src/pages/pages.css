@@ -8,6 +8,16 @@
     box-sizing: border-box; /* Ensure padding is included in width */
 }
 
+.AppBasic2 {
+    max-width: calc(100%-250px);
+    margin: 0 auto;
+    margin-left: 250px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    align-items: end;
+}
+
 /* ModeSelecterContainer style */
 .ModeSelecterContainer {
     display: flex;
@@ -80,6 +90,10 @@ a {
         width: calc(100%-200px);
         margin-left: 200px;
     }
+    .AppBasic2{
+        width: calc(100%-200px);
+        margin-left: 200px;
+    }
     .selectMode {
         width: 80px; /* Adjust width for medium devices */
         font-size: 14px; /* Adjust font size for medium devices */
@@ -89,6 +103,9 @@ a {
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
     .AppBasic {
+        max-width: calc(100%-250px); /* Adjust max-width for large devices */
+    }
+    .AppBasic2 {
         max-width: 100%; /* Adjust max-width for large devices */
     }
 }

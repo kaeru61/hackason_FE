@@ -1,6 +1,6 @@
 /* Post container */
 .postContainer {
-    width: calc(1000); /* Adjust for sidebar width */
+    width: 100%; /* Adjust for sidebar width */
     padding: 20px;
     border-bottom: 1px solid #e1e8ed;
     display: flex;
@@ -14,23 +14,24 @@
 }
 
 .userTag {
-    display: flex;
-    align-items: center;
     margin-bottom: 10px;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
 }
 
-.userName, .userId {
+.userName {
     color: #14171a;
     margin: 0;
     font-size: 16px;
     font-weight: bold;
-    margin-right: 10px;
 }
 
 .userId {
-    font-size: 14px;
+    font-size: 12px;
     color: #657786;
+    font-weight: bold;
+    margin: 0;
 }
 
 .postBodycontainer {
@@ -69,12 +70,17 @@
         padding: 15px;
     }
 
+    .userTag {
+        width: 100%; /* Adjust for smaller sidebar width */
+        padding: 15px;
+    }
+
     .userName {
         font-size: 14px;
     }
 
     .userId {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .postBody {
@@ -102,7 +108,7 @@
     }
 
     .userId {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .postBody {
