@@ -19,7 +19,6 @@ import PostDetailPage from './pages/postDetail';
 function App() {
   return (
       <BrowserRouter>
-        <div className='appHome'>
           <Routes>
             <Route path='/main' element={<Main/>}/>
             <Route path='/signin' element={<SignIn/>}/>
@@ -35,7 +34,6 @@ function App() {
               <Route path='create' element={<Create/>}/>
             </Route>
           </Routes>
-        </div>
       </BrowserRouter>
   );
 }
