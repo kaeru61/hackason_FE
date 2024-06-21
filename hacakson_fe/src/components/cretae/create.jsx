@@ -25,6 +25,7 @@ const PostForm = () => {
             const res = await axios.post("https://hackason-be1-ndzwuezdra-uc.a.run.app/post", {
                 userId: uid,
                 body: tweetText,
+                parentId: "",
                 createAt: datetime
             })
             if (!res){

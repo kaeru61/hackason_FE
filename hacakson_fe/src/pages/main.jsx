@@ -29,7 +29,7 @@ const Main = () => {
       navigate("/home")
     } else {
         return (
-          <div className='AppBasic2'>
+          <div className='body'>
             <div className="signInContainer">
                 <p>Welcome to App</p>
                 <button type="button" onClick={onSignIn} className="signUpButton">

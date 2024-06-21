@@ -13,13 +13,6 @@
     background-color: #f5f8fa;
 }
 
-.userTag {
-    margin-bottom: 10px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-}
-
 .userName {
     color: #14171a;
     margin: 0;
@@ -69,12 +62,7 @@
         width: 100%; /* Adjust for smaller sidebar width */
         padding: 15px;
     }
-
-    .userTag {
-        width: 100%; /* Adjust for smaller sidebar width */
-        padding: 15px;
-    }
-
+    
     .userName {
         font-size: 14px;
     }
