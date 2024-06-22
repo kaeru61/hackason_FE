@@ -75,7 +75,7 @@
     }
 
     .mainContent {
-        width: 100%;
+        width: clac(100%+200px);
         margin-left: 0;  
     }
 
