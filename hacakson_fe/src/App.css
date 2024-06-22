@@ -78,8 +78,8 @@
     }
 
     .mainContent {
-        margin-left: 0; /* No margin for main content */
-        width: 100%; /* Full width for main content */
+        margin-left: 0; 
+        width: 100%; 
     }
 
     .hamburgerMenu{
