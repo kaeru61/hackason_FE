@@ -5,8 +5,8 @@ import './App.css'
 const AppHome = () => {
     return(
         <div className="appHome">
-            <SideBar/>
-            <Outlet/>
+            <SideBar className="sidebar"/>
+            <Outlet className="mainContent"/>
         </div>
     )
 }
