@@ -97,6 +97,31 @@ a {
     text-decoration: none;
 }
 
+.modal2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* 縦方向にスクロール可能にする */
+  }
+  
+  /* オーバーレイのスタイル */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
+    z-index: 1000; /* モーダルよりも手前に表示 */
+  }
 
 /* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
@@ -142,30 +167,6 @@ a {
 /* modal.css */
   
   /* モーダルのスタイル */
-  .modal2 {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* 縦方向にスクロール可能にする */
-  }
-  
-  /* オーバーレイのスタイル */
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
-    z-index: 1000; /* モーダルよりも手前に表示 */
-  }
+ 
   
  
