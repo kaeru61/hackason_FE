@@ -6,11 +6,11 @@ import Create from './pages/create';
 import SignIn from './pages/signIn';
 import SignUp from './pages/signUp';
 import Main from './pages/main';
-import './App.css'
 import AppHome from './AppHome';
 import UserRegister from './pages/userRegister';
 import PostDetailPage from './pages/postDetail';
 import Profile from "./pages/profile";
+import Explore from "./pages/explore";
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
               <Route path='/app/editProfile'></Route>
               <Route path='/app/postDetail' element={<PostDetailPage/>}/>
               <Route path='/app/create' element={<Create/>}/>
+              <Route path='/app/explore' element={<Explore/>}/>
             </Route>
           </Routes>
       </BrowserRouter>

@@ -34,7 +34,7 @@ const SideBar = () => {
                     <h1 className="buttonLabel">Profile</h1>
                 </div>
             </Link>
-            <Link to='/app/home' >
+            <Link to='/app/explore' >
                 <div className="button">
                     <h1 className="buttonLabel">Explore</h1>
                 </div>
