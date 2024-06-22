@@ -101,6 +101,15 @@ a {
 
 /* Small devices (phones, 600px and down) */
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+    .AppBasic {
+        max-width: calc(100%-250px); /* Adjust max-width for large devices */
+    }
+    .AppBasic2 {
+        max-width: 100%; /* Adjust max-width for large devices */
+    }
+}
 
 
 /* Medium devices (tablets, 768px and down) */
@@ -142,15 +151,7 @@ a {
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 992px) {
-    .AppBasic {
-        max-width: calc(100%-250px); /* Adjust max-width for large devices */
-    }
-    .AppBasic2 {
-        max-width: 100%; /* Adjust max-width for large devices */
-    }
-}
+
 
 /* modal.css */
   
