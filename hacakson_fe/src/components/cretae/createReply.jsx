@@ -53,7 +53,6 @@ const ReplyForm = (props) => {
     return (
         <div className="postFormContainer">
             <div className="CreateuserTag">
-                <h1 className="CreateuserName">{props.userName}</h1>
                 <h1 className="CreateuserId">{uid}</h1>
             </div>
             <form onSubmit={handleSubmit} className="postForm">

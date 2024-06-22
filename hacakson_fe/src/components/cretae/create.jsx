@@ -53,7 +53,6 @@ const PostForm = () => {
     return (
         <div className="postFormContainer">
             <div className="CreateuserTag">
-               <h1 className="CreateuserName">userName</h1>
                 <h1 className="CreateuserId">{uid}</h1>
             </div>
             <form onSubmit={handleSubmit} className="postForm">
