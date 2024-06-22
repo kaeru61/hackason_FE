@@ -1,5 +1,6 @@
 /* App.css */
-.appHome { /* Flexbox layout to align sidebar and content horizontally */
+.appHome {
+ /* Flexbox layout to align sidebar and content horizontally */
     height: 100vh; /* Full height for the layout */
 }
 
@@ -22,6 +23,35 @@
     transition: all 0.3s ease-in-out; /* Smooth transition for responsiveness */
 }
 
+.hamburgerMenu {
+    display: none; /* デフォルトは非表示 */
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+}
+
+.hamburgerMenu div {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburgerMenu.open div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburgerMenu.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburgerMenu.open div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
 /* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
     .sidebar {
@@ -34,14 +64,15 @@
     }
 }
 
-/* Small devices (phones, 600px and down) */
-@media (max-width: 600px) {
+
+@media (max-width: 480px) {
     .appHome {
         flex-direction: column; /* Stack sidebar and content vertically */
     }
 
     .sidebar {
-        width: 100%; /* Full width sidebar */
+        width: 0;
+        display: none;
         height: auto; /* Auto height for sidebar */
         position: relative; /* Relative positioning */
     }
@@ -49,5 +80,11 @@
     .mainContent {
         margin-left: 0; /* No margin for main content */
         width: 100%; /* Full width for main content */
+        margin-top: 30px;
+    }
+
+    .hamburgerMenu{
+        display: block;
     }
 }
+

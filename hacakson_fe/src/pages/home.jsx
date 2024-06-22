@@ -30,7 +30,7 @@ const Home = () => {
                     <h1 className='label'>All</h1>
                 </div>
                 <div className='selectMode'>
-                    <h1 className='label'>following(comingsoon?)</h1>
+                    <h1 className='label'>(soon?)</h1>
                 </div>
             </div>
             <div className='timeline'>

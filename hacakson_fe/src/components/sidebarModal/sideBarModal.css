@@ -1,5 +1,4 @@
-/* Sidebar container */
-.sidebar {
+.sidebarmodal {
     width: 250px;
     height: 100vh;
     background-color: #1DA1F2; /* Twitter Blue */
@@ -14,17 +13,10 @@
     transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .sidebar {
-        width: 200px;
-    }
-}
-
 @media (max-width: 480px) {
-    .sidebar {
-        display: none;
-        width: 0;
-        flex-direction: row;
+    .sidebarmodal {
+        width: 100%;
+        flex-direction: column;
         justify-content: space-around;
         transform: translateY(0); /* Make sure it's not off-screen */
         overflow-y: visible; /* Disable vertical scrolling for horizontal layout */
@@ -111,4 +103,3 @@
 a {
     text-decoration: none;
 }
-

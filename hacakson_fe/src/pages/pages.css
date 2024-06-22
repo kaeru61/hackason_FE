@@ -1,6 +1,6 @@
 /* AppBasic container style */
 .AppBasic {
-    max-width: 100%;
+    max-width: calc(100%-250px);
     margin: 0 auto;
     margin-left: 250px;
     padding: 20px;
@@ -9,7 +9,7 @@
 }
 
 .AppBasic2 {
-    max-width: 100%;
+    max-width: calc(100%-250px);
     margin: 0 auto;
     margin-left: 250px;
     padding: 20px;
@@ -100,24 +100,17 @@ a {
 /* Media Queries for responsive design */
 
 /* Small devices (phones, 600px and down) */
-@media (max-width: 600px) {
-    .ModeSelecterContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-    .selectMode {
-        margin-bottom: 10px;
-    }
-}
+
+
 
 /* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
     .AppBasic{
-        width: 100%;
+        width: calc(100%-200px);
         margin-left: 200px;
     }
     .AppBasic2{
-        width: 100%;
+        width: calc(100%-200px);
         margin-left: 200px;
     }
     .selectMode {
@@ -126,10 +119,33 @@ a {
     }
 }
 
+@media (max-width: 600px) {
+    .ModeSelecterContainer {
+        flex-direction: row;
+        align-items: center;
+    }
+    .selectMode {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .AppBasic{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 40px;
+    }
+    .AppBasic2{
+        width: 100%;
+        margin-left: 0px;
+        margin-top:40px;
+    }
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) {
     .AppBasic {
-        max-width: 100%; /* Adjust max-width for large devices */
+        max-width: calc(100%-250px); /* Adjust max-width for large devices */
     }
     .AppBasic2 {
         max-width: 100%; /* Adjust max-width for large devices */
