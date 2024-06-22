@@ -1,0 +1,106 @@
+/* App.css */
+.appHome {
+    display: flex; /* Flexbox layout to align sidebar and content horizontally */
+    height: 100vh; /* Full height for the layout */
+    overflow: hidden; /* Prevents scrolling on the body */
+}
+
+.sidebar {
+    width: 250px; /* Adjust the width of the sidebar */
+    height: 100%; /* Full height for the sidebar */
+    background-color: #1da1f2; /* Background color similar to Twitter's */
+    position: fixed; /* Fix the sidebar position */
+    top: 0;
+    left: 0;
+    padding: 20px; /* Add some padding */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Add some shadow for better visibility */
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: space-between; /* Space out items evenly */
+}
+
+.sidebar h1 {
+    color: white; /* White text color */
+    margin: 0 0 20px 0; /* Add some margin to separate from buttons */
+    font-size: 24px; /* Adjust font size */
+}
+
+.button, .createButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* Adjust padding */
+    margin-bottom: 10px; /* Space out buttons */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button {
+    background-color: white; /* White background */
+    color: #1da1f2; /* Twitter blue text color */
+}
+
+.button:hover {
+    background-color: #e1e8ed; /* Light grey on hover */
+}
+
+.createButton {
+    background-color: #1da1f2; /* Twitter blue background */
+    color: white; /* White text color */
+}
+
+.createButton:hover {
+    background-color: #0d95e8; /* Darker blue on hover */
+}
+
+.buttonLabel, .createButtonLabel {
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+}
+
+.mainContent {
+    margin-left: 250px; /* Make room for the sidebar */
+    padding: 20px; /* Add some padding for the content */
+    width: calc(100% - 250px); /* Adjust the width to fit the remaining space */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+    transition: all 0.3s ease-in-out; /* Smooth transition for responsiveness */
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Adjust sidebar width for tablets */
+    }
+
+    .mainContent {
+        margin-left: 200px; /* Adjust content margin for tablets */
+        width: calc(100% - 200px); /* Adjust content width for tablets */
+    }
+}
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .appHome {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width sidebar */
+        height: auto; /* Auto height for sidebar */
+        position: relative; /* Relative positioning */
+    }
+
+    .mainContent {
+        margin-left: 0; /* No margin for main content */
+        width: 100%; /* Full width for main content */
+    }
+
+    .button, .createButton {
+        width: 100%; /* Full width buttons */
+    }
+
+    .buttonLabel, .createButtonLabel {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
