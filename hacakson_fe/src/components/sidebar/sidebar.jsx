@@ -1,10 +1,22 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { Link, useNavigate } from "react-router-dom"
 import "./sidebar.css"
 import { fireAuth } from "../../firebase"
 
 const SideBar = () => {
-const navigate = useNavigate();
+    const [uid, setUid] = useState(null);
+    useEffect(() => {
+        const unsubscribe = fireAuth.onAuthStateChanged(user => {
+            if (user) {
+                setUid(user.uid);
+            } else {
+                setUid(null); // ログアウト時の処理
+            }
+        });
+
+        return () => unsubscribe();
+    }, []);
+    const navigate = useNavigate();
     const onLogOut = () => {
             fireAuth.signOut();
             navigate("/");
@@ -17,7 +29,7 @@ const navigate = useNavigate();
                     <h1 className="buttonLabel">Home</h1>
                 </div>
             </Link>
-            <Link to='/app/profile' >
+            <Link to='/app/profile' state={{userId: uid}} >
                 <div className="button">
                     <h1 className="buttonLabel">Profile</h1>
                 </div>

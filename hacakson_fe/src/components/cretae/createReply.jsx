@@ -54,7 +54,7 @@ const ReplyForm = (props) => {
         <div className="postFormContainer">
             <div className="userTag">
                         <h1 className="userName">userName</h1>
-                        <h1 className="userName">{uid}</h1>
+                        <h1 className="userId">{uid}</h1>
             </div>
             <form onSubmit={handleSubmit} className="postForm">
                 <textarea

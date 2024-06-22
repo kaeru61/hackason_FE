@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './create.css'; // PostFormのスタイルを記述するCSSファイルをインポート
+import './create2.css'; // PostFormのスタイルを記述するCSSファイルをインポート
 import axios from 'axios';
 import { fireAuth } from '../../firebase';
 
@@ -54,7 +54,7 @@ const PostForm = () => {
         <div className="postFormContainer">
             <div className="userTag">
                     <h1 className="userName">userName</h1>
-                    <h1 className="userName">{uid}</h1>
+                    <h1 className="userId">{uid}</h1>
             </div>
             <form onSubmit={handleSubmit} className="postForm">
                 <textarea

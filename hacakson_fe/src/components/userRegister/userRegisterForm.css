@@ -108,6 +108,7 @@
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    marginTop:10px;
 }
 
 .registerButton:hover {

@@ -8,14 +8,19 @@ const ProfileInfoMine = (props) => {
             <div className="userTag">
                 <h1 className="userName">{props.userName}</h1>
                 <h1 className="userId">@{props.userId}</h1>
-                <Link to='/app/editProfile'>
-                    <div className='selectMode'>
+                {props.mine==true ? (
+                    <div className='selectMode' onClick={props.HandleEdit}>
                         <h1 className='label'>Edit</h1>
                     </div>
-                </Link>
+                    ) : (
+                <div className='selectMode'>
+                    <h1 className='label'>follow</h1>
+                </div>
+                )
+                }
             </div>
             <div className="followsContainer">
-                <div className="followsInfo">
+                <div className="followsInfo" onClick={props.Handlefollower}>
                     <h1 className="text1">{props.followings}</h1>
                     <h1 className="text2">followings</h1>
                 </div>

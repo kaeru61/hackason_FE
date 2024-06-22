@@ -3,7 +3,7 @@ import './pages.css'
 
 const Create = () => {  
     return(
-        <div className="AppBasic2">
+        <div className="AppBasic">
           <PostForm/>
         </div>
     )

@@ -3,10 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 import './post2.css'
 
-const Reply = (props) => {
-    
+const ProfilePost = (props) => {
+    const navigate = useNavigate()
+    const LinkToPostDetail = () => {
+        navigate("/app/postDetail", {
+            state: { postId: props.id }
+        })
+    }
     return(
-        <div className="postContainer">
+        <div className="postContainer" onClick={LinkToPostDetail}>
                 <div className="postBodycontainer" >
                     <h1 className="userName">{props.userName}</h1>
                     <h1 className="userId">{props.userId}</h1>
@@ -18,4 +23,4 @@ const Reply = (props) => {
     )
 }
 
-export default Reply;
+export default ProfilePost;

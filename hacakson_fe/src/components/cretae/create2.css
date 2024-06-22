@@ -1,0 +1,71 @@
+/* post.css */
+
+.postContainer {
+    background-color: #fff;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.postBodyContainer {
+    margin-bottom: 10px;
+}
+
+.userTag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.userName, .userId {
+    font-size: 16px;
+    color: #657786;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 20px);
+}
+
+.postBody {
+    font-size: 18px;
+    color: #14171a;
+    margin: 10px 0;
+}
+
+.Icons {
+    display: flex;
+    align-items: center;
+}
+
+.Icon {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.likes {
+    font-size: 14px;
+    color: #657786;
+}
+
+@media (max-width: 768px) {
+    .postContainer {
+        padding: 15px;
+    }
+
+    .userName, .userId {
+        font-size: 14px;
+    }
+
+    .postBody {
+        font-size: 16px;
+    }
+
+    .likes {
+        font-size: 12px;
+    }
+}

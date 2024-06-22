@@ -1,11 +1,7 @@
-import SideBar from './components/sidebar/sidebar';
 import { Route, Routes } from "react-router-dom"
 import { BrowserRouter } from 'react-router-dom';
 import "./App.css"
 import Home from './pages/home';
-import Homefollowing from './pages/home_following';
-import ProfileMine from './pages/profile';
-import ProfileMineLikes from './pages/profileLikes';
 import Create from './pages/create';
 import SignIn from './pages/signIn';
 import SignUp from './pages/signUp';
@@ -14,7 +10,7 @@ import './App.css'
 import AppHome from './AppHome';
 import UserRegister from './pages/userRegister';
 import PostDetailPage from './pages/postDetail';
-
+import Profile from "./pages/profile";
 
 function App() {
   return (
@@ -26,7 +22,7 @@ function App() {
             <Route path='/register' element={<UserRegister/>}/>
             <Route path='/app' element={<AppHome />}>
               <Route path='/app/home' element={<Home/>}/>
-              <Route path='/app/profile' element={<ProfileMine/>}/>
+              <Route path='/app/profile' element={<Profile/>}/>
               <Route path='/app/editProfile'></Route>
               <Route path='/app/postDetail' element={<PostDetailPage/>}/>
               <Route path='/app/create' element={<Create/>}/>

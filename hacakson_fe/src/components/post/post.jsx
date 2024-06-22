@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom"; 
-import { AiOutlineHeart } from "react-icons/ai";
-import './post.css'
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import './post2.css'
 import { fireAuth } from '../../firebase'
 import axios from 'axios'
 
@@ -23,7 +23,8 @@ const Post = (props) => {
     }, []);
     const navigate = useNavigate();
     const [likeStatus, setLikeStatus] = useState(false);
-    const LinkToProfile = (props) =>{
+    
+    const LinkToProfile = () =>{
         navigate("/app/profile", {
             state: { userId: props.userId}
         })
@@ -71,7 +72,7 @@ const Post = (props) => {
                     <h1 className="postBody">{props.postBody}</h1>
                 </div>
             <div className="Icons">
-                { likeStatus===false ? <AiOutlineHeart className='Icon' onClick={HandleClickF}/> : <AiOutlineHeart className="Icon"/>}
+                { likeStatus===false ? <AiOutlineHeart className='Icon' onClick={HandleClickF}/> : <AiFillHeart className="IconF"/>}
                 <p className="likes">{props.Likes}</p>
             </div>
         </div>

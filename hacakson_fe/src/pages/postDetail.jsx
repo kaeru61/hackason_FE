@@ -9,10 +9,12 @@ import ReplyForm from "../components/cretae/createReply";
 const PostDetailPage = () => {
         const [post, setPost] = useState({root:　{}, replies:[]});
         const [replies, setReplies] = useState([]);
-        const [likedBy, setLikedBy] = useState(0);
+        const [likes, setLikes] = useState(0);
         const location = useLocation();
-        const postId = location.state?.postId;
+        const initpostId = location.state?.postId;
+        const [postId, setPostId] = useState(initpostId)
         const [reply, setReply] = useState(false)
+        const path = location.pathname
 
         const FetchPosts = async () => {
             try {
@@ -25,13 +27,17 @@ const PostDetailPage = () => {
                 const postData = res.data;
                 setPost(postData)
                 setReplies(res.data.replies || [])
-                if (res.data.likedBy) {setLikedBy(res.data.likedBy.length)}
+                if (res.data.likedBy) {setLikes(res.data.likedBy.length)}
             } catch (err) {
                 console.log(err);
             }
         }
         useEffect(() => 
         {if(postId) {FetchPosts()}}, [postId])
+        const HandleClick = () => {
+            if (reply==true){setReply(false)
+            } else { setReply(true)}
+        }
         return (
             <div className="AppBasic">
                 <div className='timeline'>
@@ -40,23 +46,34 @@ const PostDetailPage = () => {
                     userName={post.root.userName}
                     userId={post.root.userId}
                     postBody={post.root.body}
-                    Likes={likedBy}
+                    Likes={likes}
                     id={post.root.id}
+                    likedBy={post.likedBy || []}
+                    HandleClickReply={HandleClick}
                 />
                 ) : (
                 <div>Loading post details...</div>
                 )}
                 </div>
+                { reply==true ? 
+                (<ReplyForm 
+                parentId={post.root.id}/>
+                ) : (
+                null
+                )}
                 <h1>'replies'</h1>
                 <div className='timeline'>
                 {replies.length > 0 ? (
                     replies.map((reply) => (
+                        <div onClick={() => setPostId(reply.id)}>
                         <Reply
                         userName={reply.userName}
                         userId={reply.userId}
                         postBody={reply.body}
                         id={reply.id}
+                        path={path}
                         />
+                        </div>
                     ))
                     ) : (
                         <div>No replies yet.</div>
