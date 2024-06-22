@@ -1,15 +1,15 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom"; 
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart, AiOutlineMessage } from "react-icons/ai";
 import './post2.css'
 import { fireAuth } from '../../firebase'
 import axios from 'axios'
-
-
+import ReplyForm from "../cretae/createReply";
 
 
 const Post = (props) => {
     const [uid, setUid] = useState(null);
+    const [ reply, setReply] = useState(false)
     useEffect(() => {
         const unsubscribe = fireAuth.onAuthStateChanged(user => {
             if (user) {
@@ -62,6 +62,13 @@ const Post = (props) => {
     const HandleClickF = () =>  {
         fetchLike();
     }
+
+    const HandleReply = () => {
+        if (reply==true){
+            setReply(false)
+        } else (setReply(true))
+    }
+
     return(
         <div className="postContainer">
                 <div className="postBodycontainer" onClick={LinkToProfile}>
@@ -72,9 +79,19 @@ const Post = (props) => {
                     <h1 className="postBody">{props.postBody}</h1>
                 </div>
             <div className="Icons">
+                <div className="likeIconContainer">
                 { likeStatus===false ? <AiOutlineHeart className='Icon' onClick={HandleClickF}/> : <AiFillHeart className="IconF"/>}
                 <p className="likes">{props.Likes}</p>
+                </div>
+                <AiOutlineMessage className="Icon" onClick={HandleReply}/>
             </div>
+            { reply==true ? 
+                (<ReplyForm 
+                parentId={props.id}/>
+                ) : (
+                null
+                )
+            }
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import './profile.css'
 import { Link } from "react-router-dom"
+import Followbutton from "../button/followbutton"
 
 const ProfileInfoMine = (props) => {
     return(
@@ -13,18 +14,19 @@ const ProfileInfoMine = (props) => {
                         <h1 className='label'>Edit</h1>
                     </div>
                     ) : (
-                <div className='selectMode'>
-                    <h1 className='label'>follow</h1>
-                </div>
-                )
+                    <Followbutton 
+                    userId={props.userId}
+                    CurrentUser={props.CurrentUser}
+                    uid={props.uid}/>
+                    )
                 }
             </div>
             <div className="followsContainer">
-                <div className="followsInfo" onClick={props.Handlefollower}>
+                <div className="followsInfo" onClick={props.Handlefollowing}>
                     <h1 className="text1">{props.followings}</h1>
                     <h1 className="text2">followings</h1>
                 </div>
-                <div className="followsInfo">
+                <div className="followsInfo" onClick={props.Handlefollower}>
                     <h1 className="text1">{props.followers}</h1>
                     <h1 className="text2">followers</h1>
                 </div>

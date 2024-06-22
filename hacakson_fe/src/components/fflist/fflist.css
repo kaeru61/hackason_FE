@@ -1,83 +1,90 @@
- /* フォロー/フォロワーのコンテナ */
- .ffContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  /* カテゴリー (フォロー中/フォロワー) のコンテナ */
-  .categoryContainer {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .categoryNow,
-  .categoryTheOther {
-    padding: 8px 16px;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .categoryNow {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .categoryTheOther {
-    color: #666;
-  }
-  
-  /* ユーザーリストのスタイル */
-  .userList {
-    width: 100%;
-  }
-  
+/* FollowerFollowingModal.css */
+
+.categoryContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoryNow, .categoryTheOther {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.categoryNow {
+  font-weight: bold;
+  background-color: #1da1f2;
+  color: white;
+  border-radius: 5px;
+}
+
+.categoryTheOther:hover {
+  background-color: #e8f5fd;
+}
+
+.userList {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ffDatacontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e6ecf0;
+}
+
+.ffName {
+  font-size: 16px;
+  font-weight: bold;
+  color: #14171a;
+}
+
+.ffData {
+  font-size: 14px;
+  color: #657786;
+}
+
+.ffButton {
+  padding: 5px 10px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ffButton:hover {
+  background-color: #1a91da;
+}
+
+.noData {
+  text-align: center;
+  font-size: 16px;
+  color: #657786;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
   .ffDatacontainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px;
-    background-color: #f9f9f9;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+      flex-direction: column;
+      align-items: flex-start;
   }
-  
-  .ffDatacontainer:hover {
-    background-color: #e8e8e8;
-  }
-  
-  .ffName {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .ffData {
-    color: #666;
-  }
-  
+
   .ffButton {
-    padding: 8px 16px;
-    background-color: #1da1f2;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+      margin-top: 10px;
   }
-  
-  .ffButton:hover {
-    background-color: #0c91e0;
-  }
-  
-  /* レスポンシブ対応 */
-  @media (max-width: 768px) {
-    .modal2 {
-      width: 90%;
-      max-width: 90%;
-    }
-  }
-  
+}

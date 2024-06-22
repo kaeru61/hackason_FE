@@ -19,13 +19,13 @@ const Profile = () => {
     const [followers, setFollowers] = useState(0);
     const [follower, setFollower] = useState([]);
     const [following, setFollowing] = useState([]);
+    const [currentUserF, setCurrentUserF] = useState([]);
     const location = useLocation();
     const userId = location.state?.userId;
     console.log(userId)
     const [mine, setMine] = useState(false);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [modalffIsOpen, setModalffIsOpen] = useState(false);
-    const [modalfIsOpen, setModalfIsOpen] = useState(false);
     const [category, setCategory] = useState();
     
     useEffect(() => {
@@ -43,8 +43,14 @@ const Profile = () => {
 
     useEffect(()=> {
         if(userId) {
-            fetchUser()
+            fetchUser();
+            setModalffIsOpen(false)
         };}, [userId])
+
+    useEffect(() => {
+        if(uid) {
+            fetchCurrentUser() 
+        };}, [uid])
 
     const fetchUser = async () => {
         try {
@@ -66,6 +72,20 @@ const Profile = () => {
         }
     }
 
+    const fetchCurrentUser = async () => {
+        try {
+            const res2 = await axios.get(`https://hackason-be1-ndzwuezdra-uc.a.run.app/user?id=${uid}`)
+            if (!res2){
+                throw Error(`Failed to fetch user`);
+            }
+            console.log(res2)
+            const currentUserFData = res2.data.followings;
+            if (currentUserFData !== null ) {setCurrentUserF(currentUserFData)}
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
     const CloseModal = () => {
         setModalIsOpen(false)
     }
@@ -79,7 +99,7 @@ const Profile = () => {
         setCategory('follower')
     }
 
-    const HandleFollowings = () => {
+    const Handlefollowing = () => {
         setModalffIsOpen(true)
         setCategory('following')
     }
@@ -97,19 +117,25 @@ const Profile = () => {
             followers={followers}
             followings={followings}
             mine={mine}
+            uid={uid}
             HandleEdit={OpenModal}
             Handlefollower={Handlefollower}
-            HandleFollowings={HandleFollowings}/>
+            Handlefollowing={Handlefollowing}
+            CurrentUser={currentUserF}/>
             <ReactModal isOpen={modalffIsOpen} onRequestClose={() => setModalffIsOpen(false)} className="modal2" overlayClassName="overlay">
                 { category == 'follower' ? (
                 <Fflist dataSet={follower} 
-                HandleFF={HandleFollowings}
+                HandleFF={Handlefollowing}
                 category={category}
+                uid={uid}
+                CurrentUser={currentUserF}
                 />
                 ) : (
-                <Fflist dataSet={follower}
+                <Fflist dataSet={following}
                 HandleFF={Handlefollower}
                 category={category}
+                uid={uid}
+                CurrentUser={currentUserF}
                 />
                 )}
             </ReactModal>

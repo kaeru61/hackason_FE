@@ -23,7 +23,7 @@ const UserRegisterForm = () => {
             const res = await axios.post("https://hackason-be1-ndzwuezdra-uc.a.run.app/user", {
                 id: uid,
                 name: userName,
-                age: age,
+                age: Number(age),
                 bio: bio
             })
             if (!res){
