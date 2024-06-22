@@ -9,7 +9,7 @@ const Reply = (props) => {
         <div className="postContainer">
                 <div className="postBodycontainer" >
                     <h1 className="userName">{props.userName}</h1>
-                    <h1 className="userId">{props.userId}</h1>
+                    <h1 className="PostuserId">{props.userId}</h1>
                 </div>
                 <div className="postBodycontainer" >
                     <h1 className="postBody">{props.postBody}</h1>

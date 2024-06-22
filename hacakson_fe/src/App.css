@@ -2,6 +2,7 @@
 .appHome {
  /* Flexbox layout to align sidebar and content horizontally */
     height: 100vh; /* Full height for the layout */
+    width: 100%
 }
 
 .sidebar {
