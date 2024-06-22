@@ -6,9 +6,9 @@ import Followbutton from "../button/followbutton"
 const ProfileInfoMine = (props) => {
     return(
         <div className="profileContainer">
-            <div className="userTag">
-                <h1 className="userName">{props.userName}</h1>
-                <h1 className="userId">@{props.userId}</h1>
+            <div className="ProfileuserTag">
+                <h1 className="ProfileuserName">{props.userName}</h1>
+                <h1 className="ProfileuserId">@{props.userId}</h1>
                 {props.mine==true ? (
                     <div className='selectMode' onClick={props.HandleEdit}>
                         <h1 className='label'>Edit</h1>

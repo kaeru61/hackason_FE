@@ -36,7 +36,7 @@ const Home = () => {
             <div className='timeline'>
             {posts.map((post) => {
             if (post.likedBy){return(<Post 
-            userName={post.root.userName}
+            userName={post.user.name}
             userId={post.root.userId}
             postBody={post.root.body}
             Likes={post.likedBy.length}
@@ -44,7 +44,7 @@ const Home = () => {
             likedBy={post.likedBy}
             />)
             } else {return(<Post
-                userName={post.root.userName}
+                userName={post.user.name}
                 userId={post.root.userId}
                 postBody={post.root.body}
                 Likes={0}

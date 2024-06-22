@@ -21,14 +21,14 @@
     cursor: pointer;
 }
 
-.userName {
+.PostuserName {
     font-size: 16px;
     font-weight: bold;
     margin-right: 10px;
     color: #14171a;
 }
 
-.userId {
+.PostuserId {
     font-size: 14px;
     color: #657786;
 }
@@ -85,11 +85,11 @@
         margin: 10px auto;
     }
 
-    .userName {
+    .PostuserName {
         font-size: 14px;
     }
 
-    .userId {
+    .PostuserId {
         font-size: 12px;
     }
 

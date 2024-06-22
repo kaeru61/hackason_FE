@@ -10,7 +10,6 @@
 
 .userTag {
     max-width: calc(100%-250px);
-    align-items: center;
     margin-bottom: 10px;
     cursor: pointer;
 }

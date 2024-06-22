@@ -72,8 +72,8 @@ const Post = (props) => {
     return(
         <div className="postContainer">
                 <div className="postBodycontainer" onClick={LinkToProfile}>
-                    <h1 className="userName">{props.userName}</h1>
-                    <h1 className="userId">@{props.userId}</h1>
+                    <h1 className="PostuserName">{props.userName}</h1>
+                    <h1 className="PostuserId">@{props.userId}</h1>
                 </div>
                 <div className="postBodycontainer" onClick={LinkToPostDetail}>
                     <h1 className="postBody">{props.postBody}</h1>
@@ -87,7 +87,8 @@ const Post = (props) => {
             </div>
             { reply==true ? 
                 (<ReplyForm 
-                parentId={props.id}/>
+                parentId={props.id}
+                userName={props.userName}/>
                 ) : (
                 null
                 )

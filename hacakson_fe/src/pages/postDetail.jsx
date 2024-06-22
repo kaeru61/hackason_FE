@@ -14,6 +14,7 @@ const PostDetailPage = () => {
         const initpostId = location.state?.postId;
         const [postId, setPostId] = useState(initpostId)
         const [reply, setReply] = useState(false)
+        const [user, setUser] = useState({})
         const path = location.pathname
 
         const FetchPosts = async () => {
@@ -25,6 +26,7 @@ const PostDetailPage = () => {
                 }
                 console.log(res)
                 const postData = res.data;
+                setUser(postData.user)
                 setPost(postData)
                 setReplies(res.data.replies || [])
                 if (res.data.likedBy) {setLikes(res.data.likedBy.length)}
@@ -34,6 +36,7 @@ const PostDetailPage = () => {
         }
         useEffect(() => 
         {if(postId) {FetchPosts()}}, [postId])
+
         const HandleClick = () => {
             if (reply==true){setReply(false)
             } else { setReply(true)}
@@ -43,9 +46,9 @@ const PostDetailPage = () => {
                 <div className='timeline'>
                 { post && post.root ? (
                 <PostDetail 
-                    userName={post.root.userName}
                     userId={post.root.userId}
                     postBody={post.root.body}
+                    userName={user.name}
                     Likes={likes}
                     id={post.root.id}
                     likedBy={post.likedBy || []}
@@ -57,7 +60,8 @@ const PostDetailPage = () => {
                 </div>
                 { reply==true ? 
                 (<ReplyForm 
-                parentId={post.root.id}/>
+                parentId={post.root.id}
+                userName={user.name}/>
                 ) : (
                 null
                 )}
