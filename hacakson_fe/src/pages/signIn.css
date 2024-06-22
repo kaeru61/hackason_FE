@@ -88,10 +88,6 @@
         font-size: 14px;
         padding: 8px;
     }
-    .AppBasic2{
-        width: 100%;
-        margin-left: 200px;
-    }
 }
 
 @media (max-width: 480px) {
